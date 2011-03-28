@@ -30,6 +30,7 @@ describe "EeePub::OPF" do
       ['dc:description', ''],
       ['dc:relation', ''],
       ['dc:creator', ''],
+      ['dc:author', ''],
       ['dc:publisher', ''],
       ['dc:rights', ''],
     ].each do |xpath, expect|
@@ -117,6 +118,7 @@ describe "EeePub::OPF" do
         :description => 'description',
         :relation => 'relation',
         :creator => 'creator',
+        :author => 'author',
         :publisher => 'publisher',
         :rights => 'rights'
       )
@@ -134,6 +136,7 @@ describe "EeePub::OPF" do
         ['dc:description', 'description'],
         ['dc:relation', 'relation'],
         ['dc:creator', 'creator'],
+        ['dc:author', 'author'],
         ['dc:publisher', 'publisher'],
         ['dc:rights', 'rights'],
       ].each do |xpath, expect|

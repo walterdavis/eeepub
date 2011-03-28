@@ -5,6 +5,7 @@ describe "EeePub::Maker" do
     @maker = EeePub::Maker.new do
       title 'sample'
       creator 'jugyo'
+      author 'foo bar'
       publisher 'jugyo.org'
       date "2010-05-06"
       language 'en'
@@ -26,6 +27,7 @@ describe "EeePub::Maker" do
 
   it { @maker.instance_variable_get(:@titles).should == ['sample'] }
   it { @maker.instance_variable_get(:@creators).should == ['jugyo'] }
+  it { @maker.instance_variable_get(:@authors).should == ['foo bar'] }
   it { @maker.instance_variable_get(:@publishers).should == ['jugyo.org'] }
   it { @maker.instance_variable_get(:@dates).should == ["2010-05-06"] }
   it { @maker.instance_variable_get(:@identifiers).should == [{:value => 'http://example.com/book/foo', :scheme => 'URL'}] }
@@ -54,6 +56,7 @@ describe "EeePub::Maker" do
     mock(EeePub::OPF).new(
       :title => ["sample"],
       :creator => ["jugyo"],
+      :author => ["foo bar"],
       :date => ["2010-05-06"],
       :language => ['en'],
       :subject => ['epub sample'],
@@ -78,6 +81,7 @@ describe "EeePub::Maker" do
       @maker = EeePub::Maker.new do
         title 'sample'
         creator 'jugyo'
+        author 'foo bar'
         publisher 'jugyo.org'
         date "2010-05-06"
         language 'en'
@@ -105,6 +109,7 @@ describe "EeePub::Maker" do
       mock(EeePub::OPF).new(
         :title => ["sample"],
         :creator => ["jugyo"],
+        :author => ["foo bar"],
         :date => ["2010-05-06"],
         :language => ['en'],
         :subject => ['epub sample'],
