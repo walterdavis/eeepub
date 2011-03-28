@@ -9,6 +9,7 @@ module EeePub
                   :description,
                   :relation,
                   :creator,
+                  :author,
                   :publisher,
                   :rights,
                   :manifest,
@@ -70,7 +71,7 @@ module EeePub
           builder.dc :identifier, i[:value], attrs
         end
 
-        [:title, :language, :subject, :description, :relation, :creator, :publisher, :date, :rights].each do |i|
+        [:title, :language, :subject, :description, :relation, :creator, :author, :publisher, :date, :rights].each do |i|
           value = self.send(i)
           next unless value
 

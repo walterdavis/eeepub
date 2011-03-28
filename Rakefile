@@ -8,7 +8,7 @@ begin
     gem.summary = %Q{ePub generator}
     gem.description = %Q{EeePub is a Ruby ePub generator.}
     gem.email = "jugyo.org@gmail.com"
-    gem.homepage = "http://github.com/jugyo/eeepub"
+    gem.homepage = "http://github.com/walterdavis/eeepub"
     gem.authors = ["jugyo"]
     gem.add_dependency "builder"
     gem.add_development_dependency "rspec"

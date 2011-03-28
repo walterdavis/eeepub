@@ -26,6 +26,7 @@ module EeePub
     [
       :title,
       :creator,
+      :author,
       :publisher,
       :date,
       :language,
@@ -96,6 +97,7 @@ module EeePub
           :title => @titles,
           :identifier => @identifiers,
           :creator => @creators,
+          :author => @authors,
           :publisher => @publishers,
           :date => @dates,
           :language => @languages,

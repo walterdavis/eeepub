@@ -8,6 +8,7 @@ epub = EeePub.make do
   title       'sample'
   creator     'jugyo'
   publisher   'jugyo.org'
+  author      'foo bar'
   date        '2010-05-06'
   identifier  'http://example.com/book/foo', :scheme => 'URL'
   uid         'http://example.com/book/foo'
