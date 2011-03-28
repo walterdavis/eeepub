@@ -4,12 +4,12 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "eeepub"
+    gem.name = "walterdavis-eeepub"
     gem.summary = %Q{ePub generator}
-    gem.description = %Q{EeePub is a Ruby ePub generator.}
-    gem.email = "jugyo.org@gmail.com"
+    gem.description = %Q{EeePub is a Ruby ePub generator. This version is forked from the original https://github.com/jugyo/eeepub}
+    gem.email = "waltd@wdstudio.com"
     gem.homepage = "http://github.com/walterdavis/eeepub"
-    gem.authors = ["jugyo"]
+    gem.authors = ["jugyo", "walterdavis"]
     gem.add_dependency "builder"
     gem.add_development_dependency "rspec"
     gem.add_development_dependency "rr"
