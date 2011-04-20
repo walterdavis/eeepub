@@ -5,7 +5,6 @@ describe "EeePub::Easy" do
     @easy = EeePub::Easy.new do
       title 'sample'
       creator 'jugyo'
-      author 'foo bar'
       identifier 'http://example.com/book/foo', :scheme => 'URL'
       uid 'http://example.com/book/foo'
     end

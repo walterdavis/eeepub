@@ -26,7 +26,6 @@ module EeePub
     [
       :title,
       :creator,
-      :author,
       :publisher,
       :date,
       :language,
@@ -57,7 +56,7 @@ module EeePub
 
     def identifier(id, options)
       @identifiers ||= []
-      @identifiers << {:value => id, :scheme => options[:scheme]}
+      @identifiers << {:value => id, :scheme => options[:scheme], :id => options[:id]}
     end
 
     # @param [Proc] block the block for initialize
@@ -96,8 +95,8 @@ module EeePub
         OPF.new(
           :title => @titles,
           :identifier => @identifiers,
+          :unique_identifier => 'BookId',
           :creator => @creators,
-          :author => @authors,
           :publisher => @publishers,
           :date => @dates,
           :language => @languages,
